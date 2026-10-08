@@ -1,0 +1,53 @@
+/* Progress page */
+.stats {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 14px;
+}
+.stats > div {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+.stats h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+.schart svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.snums {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-content: center;
+}
+.snums b,
+.sper b {
+  display: block;
+  font-size: 30px;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+.snums span,
+.sper span,
+.sper small {
+  color: var(--muted);
+  font-size: 13px;
+}
+.sper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.sper small {
+  display: block;
+  color: var(--text);
+  font-weight: 700;
+}
+.sworst .miss {
+  justify-content: flex-start;
+}

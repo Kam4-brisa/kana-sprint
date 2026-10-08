@@ -1,0 +1,68 @@
+/* Grammar topics */
+.gram {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+.gcard {
+  text-align: left;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 130px;
+  transition:
+    transform 0.2s var(--ease),
+    border-color 0.2s;
+}
+.gcard:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+.gcard .gt {
+  font-size: 24px;
+  font-weight: 700;
+}
+.gcard .gd {
+  color: var(--muted);
+  font-size: 14px;
+}
+.gcard .best {
+  margin-top: auto;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.gcard .best i {
+  color: var(--accent);
+}
+.gex {
+  display: grid;
+  gap: 10px;
+}
+.gex div {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px 16px;
+  flex-wrap: wrap;
+}
+.gex .jp {
+  font-size: 20px;
+  font-weight: 600;
+}
+.gex small {
+  color: var(--muted);
+  font-size: 14px;
+}
+.gex .iconbtn {
+  margin-left: auto;
+}

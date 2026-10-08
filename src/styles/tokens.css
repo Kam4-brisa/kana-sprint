@@ -1,0 +1,41 @@
+/* Color and shape tokens, light and dark */
+:root {
+  --bg: #f4f4f5;
+  --surface: #ffffff;
+  --surface2: #ebebee;
+  --line: #d9d9de;
+  --text: #18181b;
+  --muted: #52525b;
+  --accent: #d9401f;
+  --accent-ink: #ffffff;
+  --ok: #15803d;
+  --bad: #c2410c;
+  --radius: 16px;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f0f11;
+    --surface: #18181b;
+    --surface2: #222226;
+    --line: #2e2e33;
+    --text: #f4f4f5;
+    --muted: #a1a1aa;
+    --accent: #ff6a4a;
+    --accent-ink: #1a0d09;
+    --ok: #4ade80;
+    --bad: #fb923c;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f0f11;
+  --surface: #18181b;
+  --surface2: #222226;
+  --line: #2e2e33;
+  --text: #f4f4f5;
+  --muted: #a1a1aa;
+  --accent: #ff6a4a;
+  --accent-ink: #1a0d09;
+  --ok: #4ade80;
+  --bad: #fb923c;
+}

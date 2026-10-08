@@ -1,0 +1,94 @@
+/* Breakpoints and motion preferences */
+@media (max-width: 900px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+  .fulls {
+    grid-template-columns: 1fr 1fr;
+  }
+  .exams {
+    grid-template-columns: 1fr 1fr;
+  }
+  .tbl {
+    grid-template-columns: 1fr;
+  }
+  .detail {
+    position: static;
+  }
+}
+@media (max-width: 767px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 24px 0 48px;
+    gap: 36px;
+  }
+  .preview {
+    justify-self: center;
+    max-width: 280px;
+  }
+  .bento {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cell.goal {
+    grid-column: span 2;
+    grid-row: auto;
+  }
+  .cell.rev {
+    grid-column: span 2;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .ring {
+    width: 110px;
+    height: 110px;
+  }
+  .modes {
+    grid-template-columns: 1fr;
+  }
+  .chal {
+    grid-template-columns: 1fr;
+    padding: 22px;
+  }
+  .chal .gl {
+    font-size: 34px;
+  }
+  .path {
+    grid-template-columns: 1fr 1fr;
+  }
+  .toggles {
+    grid-template-columns: 1fr;
+  }
+  .wcard {
+    grid-template-columns: 1fr;
+    padding: 22px;
+  }
+  .wdemo {
+    display: none;
+  }
+  .sper {
+    grid-template-columns: 1fr 1fr;
+  }
+  .exams {
+    grid-template-columns: 1fr 1fr;
+  }
+  .fulls {
+    grid-template-columns: 1fr 1fr;
+  }
+  .choice {
+    grid-template-columns: 1fr;
+  }
+  .chip.sm-hide {
+    display: none;
+  }
+  .opt {
+    padding: 14px 16px;
+    font-size: 19px;
+    min-height: 64px;
+  }
+  .rstats b {
+    font-size: 24px;
+  }
+  section {
+    padding-bottom: 56px;
+  }
+}

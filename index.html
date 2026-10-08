@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Aprenda japonês em sessões curtas: kana, kanji, vocabulário, gramática, escrita e simulados JLPT."
+    />
+    <meta name="theme-color" content="#0f0f11" />
+    <title>Kana Sprint</title>
+  </head>
+  <body>
+    <div id="home" class="wrap">
+      <nav>
+        <div class="logo"><span class="mark jp">か</span>Kana Sprint</div>
+        <div class="navr">
+          <div class="chip" title="Dias seguidos">
+            <i class="ph-fill ph-fire"></i><span id="nStreak">0</span>
+          </div>
+          <div class="chip sm-hide" title="Nível">
+            <i class="ph-fill ph-lightning"></i>Nível <span id="nLvl">1</span>
+          </div>
+          <button class="iconbtn audBtn" aria-label="Ligar ou desligar áudio">
+            <i class="ph ph-speaker-high"></i>
+          </button>
+          <button class="iconbtn romBtn" aria-label="Modo romaji">
+            <span class="rtxt">Aa</span>
+          </button>
+          <button class="iconbtn" id="openSet" aria-label="Ajustes">
+            <i class="ph ph-gear-six"></i>
+          </button>
+          <button class="iconbtn" id="themeBtn" aria-label="Trocar tema">
+            <i class="ph ph-moon"></i>
+          </button>
+        </div>
+      </nav>
+
+      <header class="hero">
+        <div class="enter">
+          <h1>Japonês em <em>2 minutos</em> por vez.</h1>
+          <p class="sub" id="heroSub"></p>
+          <div class="ctas" id="heroCtas"></div>
+        </div>
+        <div class="preview" id="preview" aria-hidden="true">
+          <div class="card3 b2"></div>
+          <div class="card3 b1"></div>
+          <div class="card3 f" id="pvCard">
+            <i class="ph ph-speaker-high spk" id="pvSpk"></i><span class="big jp" id="pvG">あ</span
+            ><span class="rom" id="pvR">a</span>
+          </div>
+        </div>
+      </header>
+
+      <section>
+        <h2>Hoje</h2>
+        <div class="bento" id="bento"></div>
+      </section>
+
+      <section id="trilha">
+        <h2>Sua trilha</h2>
+        <div class="tabs" role="tablist" id="pathTabs">
+          <button role="tab" data-tab="h">Hiragana</button>
+          <button role="tab" data-tab="k">Katakana</button>
+          <button role="tab" data-tab="j">Kanji</button>
+          <button role="tab" data-tab="w">Palavras</button>
+        </div>
+        <div class="path" id="path"></div>
+      </section>
+
+      <section>
+        <h2>Treino livre</h2>
+        <button class="chal" data-mode="all">
+          <div>
+            <h3>Desafio geral</h3>
+            <p>
+              Hiragana, katakana, kanji e palavras misturados numa rodada só. Sem precisar ir por
+              partes.
+            </p>
+          </div>
+          <span class="gl jp">あア日ねこ</span>
+        </button>
+        <h3 class="fullh">Categoria completa</h3>
+        <p class="fullp">Todos os itens de uma categoria, cada um uma vez, do começo ao fim.</p>
+        <div class="fulls" id="fulls"></div>
+        <div class="modes" id="modes"></div>
+      </section>
+
+      <section id="escrever">
+        <button class="wcard" data-mode="write">
+          <div>
+            <h2 style="margin: 0 0 8px">Escrever</h2>
+            <p>
+              Aprenda a ordem dos traços e desenhe com o dedo ou o mouse. O site confere cada traço.
+            </p>
+            <span class="btn primary" style="margin-top: 18px"
+              ><i class="ph-bold ph-pencil-simple"></i>Treinar escrita</span
+            >
+          </div>
+          <span class="wdemo jp" aria-hidden="true">書</span>
+        </button>
+      </section>
+
+      <section id="gramatica">
+        <h2>Gramática</h2>
+        <div class="gram" id="gram"></div>
+      </section>
+
+      <section id="provas">
+        <h2>Simulados JLPT</h2>
+        <div class="exams" id="exams"></div>
+        <p class="note">Simulados no estilo do JLPT para treinar. Não são provas oficiais.</p>
+      </section>
+
+      <section id="progresso">
+        <h2>Seu progresso</h2>
+        <div class="stats" id="stats"></div>
+      </section>
+
+      <section>
+        <h2>Tabela</h2>
+        <div class="tabs" role="tablist" id="tblTabs">
+          <button role="tab" data-tt="h">Hiragana</button>
+          <button role="tab" data-tt="k">Katakana</button>
+          <button role="tab" data-tt="j">Kanji</button>
+        </div>
+        <div class="tbl">
+          <div>
+            <div id="kgrid"></div>
+            <div class="legend">
+              <span><b></b>Não visto</span
+              ><span
+                ><b style="background: color-mix(in srgb, var(--accent) 28%, var(--surface))"></b
+                >Aprendendo</span
+              ><span
+                ><b style="background: var(--accent); border-color: transparent"></b>Dominado</span
+              >
+            </div>
+          </div>
+          <aside class="detail" id="detail" aria-live="polite"></aside>
+        </div>
+      </section>
+
+      <footer>
+        <span>Seu progresso fica salvo neste navegador.</span>
+        <span>Atalhos: 1 a 4 responde, R repete o som, P pausa, Esc sai.</span>
+        <span
+          >Ordem dos traços:
+          <a href="https://kanjivg.tagaini.net/" style="color: inherit">KanjiVG</a>, licença CC
+          BY-SA 3.0.</span
+        >
+      </footer>
+    </div>
+
+    <div id="play" class="wrap">
+      <div class="bar">
+        <button class="iconbtn" id="quitBtn" aria-label="Sair"><i class="ph ph-x"></i></button>
+        <div class="track"><div class="fill" id="fill"></div></div>
+        <button class="iconbtn audBtn" aria-label="Ligar ou desligar áudio">
+          <i class="ph ph-speaker-high"></i>
+        </button>
+        <button class="iconbtn romBtn" aria-label="Modo romaji">
+          <span class="rtxt">Aa</span>
+        </button>
+        <button class="iconbtn" id="pauseBtn" aria-label="Pausar">
+          <i class="ph ph-pause"></i>
+        </button>
+        <div class="chip"><i class="ph-fill ph-lightning"></i><span id="runXp">0</span></div>
+      </div>
+      <div class="timer" id="timer"></div>
+      <div class="stage" id="stage"></div>
+      <div class="pauseov" id="pauseOv" hidden>
+        <div>
+          <h2>Pausado</h2>
+          <p>Respira. Volta quando quiser.</p>
+          <button class="btn primary" id="resumeBtn">
+            <i class="ph-bold ph-play"></i>Continuar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <dialog id="setDlg">
+      <h2>
+        Ajustes
+        <button class="iconbtn" id="closeSet" aria-label="Fechar"><i class="ph ph-x"></i></button>
+      </h2>
+      <div class="field">
+        <span class="lab" id="lLen">Cartas por treino livre</span>
+        <div class="seg" role="radiogroup" aria-labelledby="lLen" data-set="len"></div>
+      </div>
+      <div class="field">
+        <span class="lab" id="lSecs">Tempo por carta</span>
+        <div class="seg" role="radiogroup" aria-labelledby="lSecs" data-set="secs"></div>
+        <span class="help">Se o relógio te deixa ansioso, use "Sem tempo".</span>
+      </div>
+      <div class="field">
+        <span class="lab" id="lGoal">Meta diária</span>
+        <div class="seg" role="radiogroup" aria-labelledby="lGoal" data-set="goal"></div>
+      </div>
+      <label class="sw"
+        >Áudio em japonês (perguntas de ouvir e pronúncia)<input type="checkbox" data-sw="audio"
+      /></label>
+      <label class="sw"
+        >Modo romaji (palavras e kanji mostram a leitura em vez do português)<input
+          type="checkbox"
+          data-sw="romaji"
+      /></label>
+      <label class="sw"
+        >Furigana nos simulados (leitura em cima dos kanji)<input type="checkbox" data-sw="furi"
+      /></label>
+      <label class="sw">Sons de acerto e erro<input type="checkbox" data-sw="sfx" /></label>
+      <label class="sw">Falar a pronúncia sozinho<input type="checkbox" data-sw="voice" /></label>
+      <label class="sw">Vibrar no celular<input type="checkbox" data-sw="vib" /></label>
+      <p
+        class="help"
+        id="voiceNote"
+        style="font-size: 13px; color: var(--muted); margin: 6px 0 10px"
+      ></p>
+      <button class="danger" id="resetBtn">Apagar todo o progresso</button>
+    </dialog>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

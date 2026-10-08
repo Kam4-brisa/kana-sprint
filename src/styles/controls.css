@@ -1,0 +1,108 @@
+/* Navigation, buttons and chips */
+nav {
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.logo {
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.logo .mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+}
+.navr {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.chip i {
+  font-size: 17px;
+  color: var(--accent);
+}
+.iconbtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  font-size: 18px;
+  flex-shrink: 0;
+  transition: transform 0.2s var(--ease);
+}
+.iconbtn:active {
+  transform: scale(0.94);
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 16px;
+  white-space: nowrap;
+  transition:
+    transform 0.2s var(--ease),
+    background 0.2s,
+    opacity 0.2s;
+}
+.btn:active {
+  transform: scale(0.97);
+}
+.btn.primary {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+.btn.ghost {
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+.btn:disabled {
+  opacity: 0.5;
+}
+
+.audBtn.off {
+  color: var(--muted);
+  border-style: dashed;
+}
+.romBtn .rtxt {
+  font-weight: 800;
+  font-size: 14px;
+}
+.romBtn:not(.off) {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-color: transparent;
+}
+.romBtn.off {
+  color: var(--muted);
+}

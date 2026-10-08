@@ -1,0 +1,235 @@
+/* Mock exams and furigana */
+/* exams */
+.exams {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+.exam {
+  text-align: left;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 200px;
+  transition:
+    transform 0.25s var(--ease),
+    border-color 0.2s;
+}
+.exam:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+.exam .lv {
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+.exam:first-child .lv {
+  color: var(--accent);
+}
+.exam p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.45;
+}
+.exam .best {
+  margin-top: auto;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.exam .best i {
+  color: var(--accent);
+}
+.note {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 14px;
+}
+.ex {
+  width: 100%;
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.esec {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent);
+}
+.passage {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: 12px;
+  padding: 18px 20px;
+  font-size: 19px;
+  line-height: 1.9;
+}
+.eq {
+  font-size: clamp(20px, 3.4vw, 26px);
+  line-height: 1.8;
+  font-weight: 500;
+}
+.eq u {
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+}
+.eopts {
+  display: grid;
+  gap: 10px;
+}
+.eopt {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+  background: var(--surface);
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  font-size: 20px;
+  transition:
+    border-color 0.15s,
+    background 0.15s;
+}
+.eopt:not(:disabled):hover {
+  border-color: var(--muted);
+}
+.eopt.ok {
+  border-color: var(--ok);
+  background: color-mix(in srgb, var(--ok) 16%, var(--surface));
+}
+.eopt.bad {
+  border-color: var(--bad);
+  background: color-mix(in srgb, var(--bad) 16%, var(--surface));
+}
+.eopt.pick {
+  border-color: var(--accent);
+}
+.eopt:disabled:not(.ok):not(.bad):not(.pick) {
+  opacity: 0.5;
+}
+.exp {
+  background: var(--surface2);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  line-height: 1.5;
+}
+.exp b {
+  display: block;
+  margin-bottom: 4px;
+}
+.secs {
+  display: grid;
+  gap: 8px;
+  width: 100%;
+  text-align: left;
+}
+.secs div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px 16px;
+}
+.wrongs {
+  display: grid;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+}
+.wrongs .w {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  line-height: 1.6;
+}
+.wrongs .w .jp {
+  font-size: 18px;
+}
+.wrongs .w p {
+  color: var(--muted);
+  font-size: 15px;
+}
+.choice {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.choice button {
+  text-align: left;
+  background: var(--surface);
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: border-color 0.2s;
+}
+.choice button:hover {
+  border-color: var(--accent);
+}
+.choice b {
+  font-size: 19px;
+}
+.choice span {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.4;
+}
+.ehead {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.etime {
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 14px;
+}
+.etime.low {
+  color: var(--bad);
+  border-color: var(--bad);
+}
+.furiBtn {
+  margin-left: auto;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 5px 12px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+  background: var(--surface);
+}
+.furiBtn.on {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-color: transparent;
+}
+ruby rt {
+  font-size: 0.5em;
+  color: var(--muted);
+  font-weight: 500;
+}
+.eq {
+  line-height: 2.1;
+}
